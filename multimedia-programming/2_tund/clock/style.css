@@ -1,0 +1,46 @@
+.clockArea {
+    width: 222px;
+    height: 378px;
+}
+
+.clock {
+    width: 554px;
+    height: 945px;
+    position: relative;
+    transform-origin: 0 0;
+    transform: scale(.4);
+}
+
+.clock * {
+    position: absolute;
+}
+
+.clockface {
+    width: 369px;
+    height: 369px;
+    left: 92px;
+    top: 88px;
+}
+
+.pendulus {
+    left: 194px;
+    top: 420px;
+    transform-origin: 50% 0;
+    animation: swing 1s ease-in-out infinite alternate;
+}
+
+.clockhand {
+    top: 10px;
+    left: 158px;
+    transform-origin: 50% 177px;
+}
+
+@keyframes swing {
+    0%{transform: rotate(30deg)}
+    100%{transform: rotate(-30deg)}
+}
+
+@keyframes minuteHand {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg)}
+}

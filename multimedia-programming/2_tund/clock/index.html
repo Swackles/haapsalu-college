@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="et">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>kell</title>
+		<script src="script.js"></script>
+		<script src="timeToSpeech.js"></script>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body data-new-gr-c-s-check-loaded="14.1080.0" data-gr-ext-installed="">
+		<h1>Ajanäitaja</h1>
+		<audio id="speaker"></audio>
+		<div id="clockArea" class="clockArea">
+			<div id="clock" class="clock">
+				<img src="assets/images/clock_box.png" alt="kellakast">
+				<img src="assets/images/clock_pendulum.png" alt="kellapendel" id="pendulus" class="pendulus">
+				<div id="clockface" class="clockface">
+					<img src="assets/images/clock_face.png" alt="kella numbrilaud">
+					<img src="assets/images/hour_hand.png" id="hourhand" alt="tunniseier" class="clockhand hourhand">
+					<img src="assets/images/minute_hand.png" id="minutehand" alt="minutiseier" class="clockhand minutehand">
+					<img src="assets/images/second_hand.png" id="secondhand" alt="sekundiseier" class="clockhand secondhand">
+				</div>
+				<img src="assets/images/clock_frame.png" alt="kellakasti raam">
+			  </div>
+		  </div>
+		<input type="checkbox" id="allowSound">
+		<label for="allowSound">Luba heli</label>
+		<button onclick="playCurrentTime()">Ütle kell</button>
+	</body>
+</html>

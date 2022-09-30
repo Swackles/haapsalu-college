@@ -1,0 +1,15 @@
+.container {
+    width: 640px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container * {
+    position: absolute;
+}
+
+#photo1 {
+    opacity: 0;
+    transition: ease 1s;
+}
