@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script src="AudioApi.js"></script>
+    <script src="script.js"></script>
+    <script src="https://g200kg.github.io/input-knobs/input-knobs.js"></script>
+    <style>
+        body {
+            color: white;
+            font-family: Arial;
+            text-transform: uppercase;
+            overflow: hidden;
+        }
+
+        .theremin-body {
+            width: 30em;
+            height: 8em;
+            margin: 20em 0 0 20em;
+            background-color: #402F1D;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 1em
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .plate > * {
+            padding: .7em;
+        }
+
+        .plate {
+            width: 16em;
+            height: min-content;
+            background-color: #AAA9AD;
+            flex-direction: row !important;
+            overflow: hidden;
+        }
+
+        .volume-antenna {
+            background-color: #AAA9AD;
+            width: 14em;
+            height: .2em;
+            position: absolute;
+            top: 20.5em;
+            left: 6.5em;
+        }
+
+        .pitch-antenna {
+            background-color: #AAA9AD;
+            width: .2em;
+            height: 20em;
+            position: absolute;
+            top: 0;
+            right: 3em;
+        }
+
+        .theremin-area {
+            position: absolute;
+            height: 20em;
+            width: 46em;
+            top: 0;
+            left: 6.5em
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="theremin-body">
+            <div id="play-area" class="theremin-area"></div>
+            <div class="pitch-antenna"></div>
+            <div class="volume-antenna"></div>
+            <div class="plate container">
+                <div class="container">
+                    <label for="volume">Volume</label>
+                    <input type="range" id="volume" min="0" max="1" step=".01" class="input-knob">
+                </div>
+                <div class="container">
+                    <label for="pitch">Pitch</label>
+                    <input type="range" id="pitch" min="0" max="1" step=".01" class="input-knob"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
